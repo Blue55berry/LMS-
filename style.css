@@ -1,0 +1,417 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: #f5f8f9;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f6f7;
+    padding: 0.5rem 2.8rem;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* background: red; */
+}
+.nav-logo {
+    font-size: 2rem;
+    color: #111827;
+    font-weight: bold;
+}
+.nav-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+.nav-subtitle {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-left: 0.7rem;
+}
+.navbar-center {
+    display: flex;
+    gap: 2rem;
+}
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-link.active, .nav-link:hover {
+    background: #111827;
+    color: #fff;
+}
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+.nav-search {
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+    background: #fff;
+    outline: none;
+    transition: border 0.2s;
+}
+.nav-search:focus {
+    border: 1.5px solid #111827;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, #f5f8f9 60%, #eaf1f5 100%);
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    min-height: 520px;
+}
+.hero-content {
+    flex: 1 1 420px;
+    max-width: 540px;
+}
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    color: #111827;
+    line-height: 1.1;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2.2rem;
+}
+.btn {
+    padding: 0.9rem 2.2rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.btn-primary {
+    background: #111827;
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #1f2937;
+}
+.btn-outline {
+    background: #fff;
+    color: #111827;
+    border: 2px solid #111827;
+}
+.btn-outline:hover {
+    background: #f3f6f7;
+}
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #6b7280;
+}
+.hero-stats div {
+    text-align: center;
+}
+.hero-stats span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Carousel */
+.hero-carousel {
+    flex: 1 1 420px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.carousel-window {
+    width: 100%;
+    max-width: 420px;
+    height: 320px;
+    background: #0d1623;
+    border-radius: 18px 18px 18px 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+    height: 100%;
+}
+.carousel-slide {
+    min-width: 100%;
+    padding: 2.2rem 2rem 2rem 2rem;
+    color: #fff;
+    font-size: 1.08rem;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    background: #0d1623;
+    border: none;
+    outline: none;
+    height: 320px;
+    overflow-y: auto;
+}
+.carousel-dots {
+    display: flex;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d1d5db;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 2px solid #fff;
+}
+.dot.active {
+    background: #111827;
+}
+.carousel-label {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+}
+
+/* Features Section */
+.features {
+    background: #f5f8f9;
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    text-align: center;
+}
+.features h2 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: #111827;
+}
+.features p {
+    color: #4b5563;
+    margin-bottom: 2.2rem;
+}
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.feature-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    padding: 2.2rem 1.7rem 1.7rem 1.7rem;
+    max-width: 270px;
+    min-width: 220px;
+    flex: 1 1 220px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+.feature-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+.feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+}
+.feature-card p {
+    color: #4b5563;
+    font-size: 1rem;
+}
+.feature-card a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+.feature-card a:hover {
+    text-decoration: underline;
+}
+
+/* CTA Section */
+.cta {
+    background: #f3f6f7;
+    padding: 3rem 2.5rem 2.5rem 2.5rem;
+    text-align: center;
+}
+.cta h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    color: #111827;
+}
+.cta p {
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+.cta-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* Footer */
+.footer {
+    background: #f5f8f9;
+    border-top: 1px solid #e5e7eb;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    color: #4b5563;
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.footer-links div {
+    min-width: 120px;
+}
+.footer-links h4 {
+    color: #111827;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+.footer-links a {
+    display: block;
+    color: #4b5563;
+    text-decoration: none;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #111827;
+}
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+}
+.footer-desc {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1rem;
+    color: #6b7280;
+}
+.footer-subscribe {
+    min-width: 260px;
+}
+.footer-subscribe h4 {
+    color: #111827;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.subscribe-form {
+    display: flex;
+    
+    gap: 0.7rem;
+    margin-top: 0.7rem;
+}
+.subscribe-form input[type="email"] {
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+    background: #fff;
+    outline: none;
+    transition: border 0.2s;
+}
+.subscribe-form input[type="email"]:focus {
+    border: 1.5px solid #111827;
+}
+
+@media (max-width: 1100px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+    .hero-carousel {
+        margin-top: 0;
+        max-width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    .navbar, .hero, .features, .cta, .footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer-links {
+        gap: 2rem;
+    }
+}
+@media (max-width: 600px) {
+    .navbar-center {
+        gap: 0.7rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-carousel {
+        max-width: 100%;
+    }
+    .carousel-window {
+        max-width: 100%;
+        height: 220px;
+    }
+    .carousel-slide {
+        height: 220px;
+        font-size: 0.95rem;
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    .feature-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}

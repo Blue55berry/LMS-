@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebDev Learn - HTML & CSS Mastery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Navbar-->
+    <header class="navbar">
+      <div class="navbar-left">
+        <span class="nav-logo">&#60;&#47;&#62;</span>
+        <span class="nav-title">WebDev Learn</span>
+        <span class="nav-subtitle">HTML &amp; CSS Mastery</span>
+      </div>
+      <nav class="navbar-center">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="./html.html" class="nav-link">HTML</a>
+        <a href="#" class="nav-link">CSS</a>
+        <a href="#" class="nav-link">Playground</a>
+        <a href="#" class="nav-link">About</a>
+      </nav>
+      <div class="navbar-right">
+        <input
+          type="text"
+          class="nav-search"
+          placeholder="Search HTML tags, CSS properties..."
+        />
+      </div>
+    </header>
+
+    <!--Hero section-->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Master HTML &amp; CSS<br />From Scratch</h1>
+        <p>
+          Learn web development fundamentals with comprehensive guides,
+          interactive examples, and a powerful code playground. Perfect for
+          beginners and those looking to solidify their skills.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary">Start Learning HTML</button>
+          <button class="btn btn-outline">Explore CSS</button>
+        </div>
+        <div class="hero-stats">
+          <div><span>50+</span><br />HTML Tags<br />Covered</div>
+          <div><span>200+</span><br />CSS Properties</div>
+          <div><span>500+</span><br />Code Examples</div>
+          <div><span>100+</span><br />Interactive Demos</div>
+        </div>
+      </div>
+      <div class="hero-carousel">
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <pre class="carousel-slide">
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+                    </pre
+            >
+            <pre class="carousel-slide">
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.flex-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+                    </pre
+            >
+            <pre class="carousel-slide">
+.button {
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button:hover {
+  background: #1f2937;
+}
+                    </pre
+            >
+          </div>
+        </div>
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <span class="carousel-label">CSS Grid Layout</span>
+      </div>
+    </section>
+
+    <!--Learn the  web development-->
+    <section class="features">
+      <h2>Everything You Need to Learn Web Development</h2>
+      <p>
+        Our comprehensive platform provides structured learning paths, practical
+        examples, and interactive tools to master HTML and CSS.
+      </p>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>HTML Documentation</h3>
+          <p>
+            Complete reference for all HTML tags with practical examples and
+            best practices.
+          </p>
+          <a href="#">Learn More &rarr;</a>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>CSS Reference</h3>
+          <p>
+            Comprehensive guide to CSS properties including flexbox, grid, and
+            modern techniques.
+          </p>
+          <a href="#">Learn More &rarr;</a>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Interactive Playground</h3>
+          <p>
+            Code editor with live preview to experiment and practice your HTML
+            and CSS skills.
+          </p>
+          <a href="#">Learn More &rarr;</a>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗂️</div>
+          <h3>Learning Resources</h3>
+          <p>
+            Structured lessons and tutorials to guide your web development
+            journey.
+          </p>
+          <a href="#">Learn More &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!--Link section-->
+    <section class="cta">
+      <h2>Ready to Start Coding?</h2>
+      <p>
+        Jump into our interactive playground and start experimenting with HTML
+        and CSS right now. No setup required!
+      </p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary">Open Code Playground</button>
+        <button class="btn btn-outline">Learn More About Us</button>
+      </div>
+    </section>
+
+    <!--Footer section-->
+    <footer class="footer">
+      <div class="footer-links">
+        <div>
+          <h4>Learn</h4>
+          <a href="#">HTML</a>
+          <a href="#">CSS</a>
+          <a href="#">Playground</a>
+        </div>
+        <div>
+          <h4>Docs</h4>
+          <a href="#">API</a>
+          <a href="#">Glossary</a>
+          <a href="#">Accessibility</a>
+        </div>
+        <div>
+          <h4>Community</h4>
+          <a href="#">Forums</a>
+          <a href="#">GitHub</a>
+          <a href="#">Contribute</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-desc">
+          <span>🐱‍💻</span>
+          <span
+            >Practical, accessible HTML &amp; CSS learning for developers at
+            every level. Master web fundamentals through hands-on lessons and
+            interactive code examples.</span
+          >
+        </div>
+        <div class="footer-subscribe">
+          <h4>Stay Updated</h4>
+          <p>Get the latest lessons and updates delivered to your inbox.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-primary">
+              &#9993; Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

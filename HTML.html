@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Documentation - WebDev Learn</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="html-docs.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-left">
+        <span class="nav-logo">&#60;&#47;&#62;</span>
+        <span class="nav-title">WebDev Learn</span>
+        <span class="nav-subtitle">HTML &amp; CSS Mastery</span>
+      </div>
+      <nav class="navbar-center">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="html.html" class="nav-link active">HTML</a>
+        <a href="#" class="nav-link">CSS</a>
+        <a href="#" class="nav-link">Playground</a>
+        <a href="#" class="nav-link">About</a>
+      </nav>
+      <div class="navbar-right">
+        <input
+          type="text"
+          class="nav-search"
+          placeholder="Search HTML tags, CSS properties..."
+        />
+      </div>
+    </header>
+
+    <main class="docs-container">
+      <div class="docs-header">
+        <h1>&#60;/&#62; HTML Documentation</h1>
+        <p>
+          Comprehensive guide to HTML elements with practical examples, best
+          practices, and accessibility guidelines.
+        </p>
+        <div class="docs-stats">
+          <div class="stat-item">
+            <span class="stat-icon">📑</span>
+            <span class="stat-number">15</span>
+            <span class="stat-label">Elements</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🔄</span>
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Interactive Examples</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🌐</span>
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Universal Support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs-content">
+        <aside class="docs-sidebar">
+          <div class="search-box">
+            <input
+              type="text"
+              id="elementSearch"
+              placeholder="Search elements..."
+              onkeyup="filterElements()"
+            />
+            <select id="categoryFilter" onchange="filterElements()">
+              <option value="all">All Categories</option>
+              <option value="document">Document Structure</option>
+              <option value="text">Text Content</option>
+              <option value="semantic">Semantic Elements</option>
+              <option value="forms">Forms</option>
+            </select>
+          </div>
+          <ul class="element-list" id="elementList">
+            <li class="element-item" data-category="document">
+              <a href="#doctype" class="active">&lt;!DOCTYPE&lt;</a>
+            </li>
+            <li class="element-item" data-category="document">
+              <a href="#html">&lt;html&gt;</a>
+            </li>
+            <li class="element-item" data-category="document">
+              <a href="#head">&lt;head&gt;</a>
+            </li>
+            <li class="element-item" data-category="document">
+              <a href="#body">&lt;body&gt;</a>
+            </li>
+            <li class="element-item" data-category="text">
+              <a href="#h1">&lt;h1&gt; - &lt;h6&gt;</a>
+            </li>
+            <li class="element-item" data-category="text">
+              <a href="#p">&lt;p&gt;</a>
+            </li>
+            <li class="element-item" data-category="semantic">
+              <a href="#article">&lt;article&gt;</a>
+            </li>
+            <li class="element-item" data-category="semantic">
+              <a href="#section">&lt;section&gt;</a>
+            </li>
+            <li class="element-item" data-category="forms">
+              <a href="#form">&lt;form&gt;</a>
+            </li>
+            <li class="element-item" data-category="forms">
+              <a href="#input">&lt;input&gt;</a>
+            </li>
+          </ul>
+        </aside>
+
+        <section class="docs-main">
+          <article id="doctype" class="element-docs">
+            <h2>&lt;!DOCTYPE html&gt;</h2>
+            <p class="element-desc">
+              Declares the document type and HTML version, ensuring the browser
+              renders the page in standards mode.
+            </p>
+
+            <div class="tabs">
+              <button
+                class="tab-btn active"
+                onclick="switchTab(this, 'overview-doctype')"
+              >
+                Overview
+              </button>
+              <button
+                class="tab-btn"
+                onclick="switchTab(this, 'example-doctype')"
+              >
+                Examples
+              </button>
+              <button
+                class="tab-btn"
+                onclick="switchTab(this, 'practice-doctype')"
+              >
+                Best Practices
+              </button>
+            </div>
+
+            <div id="overview-doctype" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Must be the first line in your HTML document</li>
+                <li>Case-insensitive</li>
+                <li>Required for HTML5 documents</li>
+              </ul>
+            </div>
+
+            <div id="example-doctype" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+
+            <div id="practice-doctype" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Always include the DOCTYPE declaration</li>
+                <li>Place it at the very beginning of the document</li>
+                <li>Use the HTML5 doctype for modern web development</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- More element documentation articles will follow the same pattern -->
+        </section>
+      </div>
+    </main>
+
+    <script src="html-docs.js"></script>
+  </body>
+</html>
