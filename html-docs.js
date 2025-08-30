@@ -73,6 +73,22 @@ document.querySelectorAll('.element-item a').forEach(link => {
     });
 });
 
+document.querySelectorAll('.element-list a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Remove active class from all links
+    document.querySelectorAll('.element-list a').forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+    // Hide all articles
+    document.querySelectorAll('.element-docs').forEach(doc => doc.style.display = 'none');
+    // Show the selected article
+    const id = this.getAttribute('href').replace('#', '');
+    document.getElementById(id).style.display = '';
+    // Optionally, scroll to top of docs-main
+    document.querySelector('.docs-main').scrollTop = 0;
+  });
+});
+
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     // Show first element's content
