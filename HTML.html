@@ -108,6 +108,7 @@
         </aside>
 
         <section class="docs-main">
+          <!-- DOCTYPE -->
           <article id="doctype" class="element-docs">
             <h2>&lt;!DOCTYPE html&gt;</h2>
             <p class="element-desc">
@@ -172,7 +173,329 @@
             </div>
           </article>
 
-          <!-- More element documentation articles will follow the same pattern -->
+          <!-- HTML TAG -->
+          <article id="html" class="element-docs" style="display:none;">
+            <h2>&lt;html&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-html')">
+                Overview
+              </button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-html')">
+                Examples
+              </button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-html')">
+                Best Practices
+              </button>
+            </div>
+            <div id="overview-html" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>The root element of an HTML document.</li>
+                <li>Wraps all content except the <code>&lt;!DOCTYPE&gt;</code> declaration.</li>
+                <li>Should include a <code>lang</code> attribute for accessibility.</li>
+              </ul>
+            </div>
+            <div id="example-html" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;html lang="en"&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-html" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Always specify the <code>lang</code> attribute.</li>
+                <li>Only one <code>&lt;html&gt;</code> element per document.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- HEAD TAG -->
+          <article id="head" class="element-docs" style="display:none;">
+            <h2>&lt;head&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-head')">
+                Overview
+              </button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-head')">
+                Examples
+              </button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-head')">
+                Best Practices
+              </button>
+            </div>
+            <div id="overview-head" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Contains metadata, links to stylesheets, and scripts.</li>
+                <li>Not displayed on the page.</li>
+              </ul>
+            </div>
+            <div id="example-head" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-head" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Include <code>&lt;meta charset="UTF-8"&gt;</code> for character encoding.</li>
+                <li>Use <code>&lt;title&gt;</code> for SEO and accessibility.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- BODY TAG -->
+          <article id="body" class="element-docs" style="display:none;">
+            <h2>&lt;body&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-body')">
+                Overview
+              </button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-body')">
+                Examples
+              </button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-body')">
+                Best Practices
+              </button>
+            </div>
+            <div id="overview-body" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Contains all the content visible to users.</li>
+                <li>Only one <code>&lt;body&gt;</code> per document.</li>
+              </ul>
+            </div>
+            <div id="example-body" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;body&gt;
+  &lt;h1&gt;Welcome!&lt;/h1&gt;
+  &lt;p&gt;This is my website.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-body" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Keep structure semantic and accessible.</li>
+                <li>Use headings and sections appropriately.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- H1-H6 TAGS -->
+          <article id="h1" class="element-docs" style="display:none;">
+            <h2>&lt;h1&gt; - &lt;h6&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-h1')">Overview</button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-h1')">Examples</button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-h1')">Best Practices</button>
+            </div>
+            <div id="overview-h1" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Heading tags define the structure and hierarchy of your content.</li>
+                <li><code>&lt;h1&gt;</code> is the most important, <code>&lt;h6&gt;</code> is the least.</li>
+                <li>Used for titles and section headings.</li>
+              </ul>
+            </div>
+            <div id="example-h1" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-h1" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Use only one <code>&lt;h1&gt;</code> per page for the main title.</li>
+                <li>Follow a logical order: <code>&lt;h1&gt;</code> → <code>&lt;h2&gt;</code> → <code>&lt;h3&gt;</code>, etc.</li>
+                <li>Do not skip heading levels.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- P TAG -->
+          <article id="p" class="element-docs" style="display:none;">
+            <h2>&lt;p&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-p')">Overview</button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-p')">Examples</button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-p')">Best Practices</button>
+            </div>
+            <div id="overview-p" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Defines a paragraph of text.</li>
+                <li>Browsers add space before and after each <code>&lt;p&gt;</code> by default.</li>
+              </ul>
+            </div>
+            <div id="example-p" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-p" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Use for blocks of text, not for headings or lists.</li>
+                <li>Do not nest block elements inside <code>&lt;p&gt;</code>.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ARTICLE TAG -->
+          <article id="article" class="element-docs" style="display:none;">
+            <h2>&lt;article&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-article')">Overview</button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-article')">Examples</button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-article')">Best Practices</button>
+            </div>
+            <div id="overview-article" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Represents a self-contained piece of content.</li>
+                <li>Can be distributed and reused independently (e.g., blog post, news article).</li>
+              </ul>
+            </div>
+            <div id="example-article" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;article&gt;
+  &lt;h2&gt;News Headline&lt;/h2&gt;
+  &lt;p&gt;News content goes here.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-article" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Use for independent, distributable content.</li>
+                <li>Each <code>&lt;article&gt;</code> should make sense on its own.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- SECTION TAG -->
+          <article id="section" class="element-docs" style="display:none;">
+            <h2>&lt;section&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-section')">Overview</button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-section')">Examples</button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-section')">Best Practices</button>
+            </div>
+            <div id="overview-section" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Defines a thematic grouping of content, typically with a heading.</li>
+                <li>Used to break up content into logical sections.</li>
+              </ul>
+            </div>
+            <div id="example-section" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;section&gt;
+  &lt;h2&gt;About Us&lt;/h2&gt;
+  &lt;p&gt;Information about our company.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-section" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Use for grouping related content with a heading.</li>
+                <li>Do not use <code>&lt;section&gt;</code> as a generic container (use <code>&lt;div&gt;</code> for that).</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- FORM TAG -->
+          <article id="form" class="element-docs" style="display:none;">
+            <h2>&lt;form&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-form')">Overview</button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-form')">Examples</button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-form')">Best Practices</button>
+            </div>
+            <div id="overview-form" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Defines an interactive form for user input.</li>
+                <li>Can contain input fields, buttons, and other controls.</li>
+              </ul>
+            </div>
+            <div id="example-form" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-form" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Always use <code>label</code> elements for accessibility.</li>
+                <li>Set appropriate <code>action</code> and <code>method</code> attributes.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- INPUT TAG -->
+          <article id="input" class="element-docs" style="display:none;">
+            <h2>&lt;input&gt;</h2>
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab(this, 'overview-input')">Overview</button>
+              <button class="tab-btn" onclick="switchTab(this, 'example-input')">Examples</button>
+              <button class="tab-btn" onclick="switchTab(this, 'practice-input')">Best Practices</button>
+            </div>
+            <div id="overview-input" class="tab-content active">
+              <h3>Overview</h3>
+              <ul>
+                <li>Used to create interactive controls in a web form.</li>
+                <li>Supports many types: text, password, checkbox, radio, etc.</li>
+              </ul>
+            </div>
+            <div id="example-input" class="tab-content">
+              <h3>Example</h3>
+              <div class="code-block">
+                <pre><code>&lt;input type="text" name="username"&gt;
+&lt;input type="checkbox" name="subscribe"&gt; Subscribe</code></pre>
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+              </div>
+            </div>
+            <div id="practice-input" class="tab-content">
+              <h3>Best Practices</h3>
+              <ul>
+                <li>Always use <code>name</code> and <code>type</code> attributes.</li>
+                <li>Pair with <code>label</code> for accessibility.</li>
+                <li>Use appropriate <code>type</code> for the data you want to collect.</li>
+              </ul>
+            </div>
+          </article>
         </section>
       </div>
     </main>
