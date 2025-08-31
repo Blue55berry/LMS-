@@ -16,18 +16,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #f3f6f7;
-    padding: 0.5rem 2.8rem;
-    border-bottom: 1px solid #e5e7eb;
+    background: transparent;
+    padding: 1rem 2.8rem;
+    background: white;
     position: sticky;
     top: 0;
     z-index: 10;
+
 }
 .navbar-left {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     /* background: red; */
+    margin: auto;
 }
 .nav-logo {
     font-size: 2rem;
@@ -47,6 +49,7 @@ body {
 .navbar-center {
     display: flex;
     gap: 2rem;
+    margin: auto;
 }
 .nav-link {
     text-decoration: none;
@@ -63,6 +66,7 @@ body {
 .navbar-right {
     display: flex;
     align-items: center;
+    margin: auto;
 }
 .nav-search {
     padding: 0.5rem 1.2rem;
@@ -83,13 +87,14 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(120deg, #f5f8f9 60%, #eaf1f5 100%);
+    background: linear-gradient(180deg, #ffffff 2rem, #eaf1f5 90%);
     padding: 3.5rem 2.5rem 2.5rem 2.5rem;
     min-height: 520px;
 }
 .hero-content {
     flex: 1 1 420px;
     max-width: 540px;
+    margin-left: 4.3rem;
 }
 .hero-content h1 {
     font-size: 2.8rem;
@@ -157,10 +162,11 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+   
 }
 .carousel-window {
     width: 100%;
-    max-width: 420px;
+    max-width: 480px;
     height: 320px;
     background: #0d1623;
     border-radius: 18px 18px 18px 18px;
@@ -176,15 +182,16 @@ body {
 }
 .carousel-slide {
     min-width: 100%;
-    padding: 2.2rem 2rem 2rem 2rem;
+    padding: 2.1rem 2.1rem 2.1rem 2.1rem;
     color: #fff;
     font-size: 1.08rem;
     font-family: 'Fira Mono', 'Consolas', monospace;
-    background: #0d1623;
+    background: #15181d;
     border: none;
     outline: none;
     height: 320px;
-    overflow-y: auto;
+    overflow: hidden;
+
 }
 .carousel-dots {
     display: flex;

@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f9fa;
+}
+.header {
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1.5rem 0 1rem 0;
+  text-align: center;
+}
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.header p {
+  color: #555;
+  margin: 0.5rem 0 0 0;
+  margin-bottom: 4px;
+}
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+.sidebar {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1.5rem 1rem;
+}
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.search-box {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 1rem;
+}
+.property-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.property-list li {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.property-list li.active,
+.property-list li:hover {
+  background: #101828;
+  color: #fff;
+}
+.main-content {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 2rem 2.5rem;
+  min-width: 0;
+}
+.main-content h2 {
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem 0;
+}
+.main-content .desc {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+.main-content .syntax {
+  background: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.main-content .section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem 0;
+}
+.main-content .example-box {
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.main-content .example-preview {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.main-content pre {
+  background: #23272f;
+  color: #fff;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}

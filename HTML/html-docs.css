@@ -1,4 +1,72 @@
 /* HTML Documentation Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 1rem 2.8rem;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* background: red; */
+    margin: auto;
+}
+.nav-logo {
+    font-size: 2rem;
+    color: #111827;
+    font-weight: bold;
+}
+.nav-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+.nav-subtitle {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-left: 0.7rem;
+}
+.navbar-center {
+    display: flex;
+    gap: 2rem;
+    margin: auto;
+}
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-link.active, .nav-link:hover {
+    background: #111827;
+    color: #fff;
+}
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.nav-search {
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+    background: #fff;
+    outline: none;
+    transition: border 0.2s;
+}
+.nav-search:focus {
+    border: 1.5px solid #111827;
+}
 .docs-container {
     max-width: 1400px;
     margin: 0 auto;

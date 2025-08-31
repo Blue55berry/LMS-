@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Reference - WebDev Learn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Home/style.css">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-left">
+        <span class="nav-logo">&#60;&#47;&#62;</span>
+        <span class="nav-title">WebDev Learn</span>
+        <span class="nav-subtitle">HTML &amp; CSS Mastery</span>
+      </div>
+      <nav class="navbar-center">
+        <a href="../Home/index.html" class="nav-link">Home</a>
+        <a href="../HTML//HTML.html" class="nav-link">HTML</a>
+        <a href="../CSS/CSS.html" class="nav-link active">CSS</a>
+        <a href="../Playground/playground.html" class="nav-link">Playground</a>
+        <a href="../About/about.html" class="nav-link">About</a>
+      </nav>
+      <div class="navbar-right">
+        <input
+          type="text"
+          class="nav-search"
+          placeholder="Search Here.."
+        />
+      </div>
+    </header>
+    <div class="header">
+      <h1>Master CSS Fundamentals</h1>
+      <p>
+        Your comprehensive guide to CSS properties, layouts, and modern styling
+        techniques.
+      </p>
+    </div>
+    <div class="container">
+      <aside class="sidebar">
+        <h2>CSS Properties</h2>
+        <input
+          class="search-box"
+          id="searchBox"
+          type="text"
+          placeholder="Search properties..."
+          oninput="filterProperties()"
+        />
+        <ul class="property-list" id="propertyList">
+          <!-- Populated by JS -->
+        </ul>
+      </aside>
+      <main class="main-content" id="mainContent">
+        <!-- Populated by JS -->
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
